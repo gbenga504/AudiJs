@@ -1,8 +1,7 @@
 /*!
- * Audi JavaScript Library v0.0.1
+ * Audi JavaScript Library v1.0
  * author : Anifowoshe Gbenga David @Gad
  * license : MIT
- * https://www.davidNode.com/audi
  */
 
 (function (global,factory) {
