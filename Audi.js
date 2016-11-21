@@ -228,7 +228,7 @@
 	
 	Audi.prototype.__defineSetter__('volume', function(val){
 		var _volume = parseFloat(val);
-		if(_volume !== NaN){
+		if(_volume){
 			defaultVolume = _volume;
 		}
 		else{
@@ -246,7 +246,7 @@
 	Audi.prototype.__defineSetter__('rate', function(val){
 		if(/^(local)$/.test(this.AudioType)){
 			var _rate = parseFloat(val);
-			if(_rate !== NaN){
+			if(_rate){
 				defaultRate = _rate;
 			}
 			else{
@@ -268,7 +268,7 @@
 	Audi.prototype.__defineSetter__('pitch', function(val){
 		if(/^(local)$/.test(this.AudioType)){
 			var _pitch = parseFloat(val);
-			if(_pitch !== NaN){
+			if(_pitch){
 				defaultPitch = _pitch;
 			}
 			else{
