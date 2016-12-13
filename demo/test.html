@@ -1,0 +1,29 @@
+<html>
+	<head></head>
+	<input type="text" id="t" placeholder="Type in something">
+	<button id="p"> pause</button>
+	<button id="r"> resume </button>
+	<button id="c"> click </button>
+	<body>
+		<script src="../src/audi.min.js" type="text/javascript"></script>
+		
+		<script>
+		var a = new Audi("local");
+		var text = document.getElementById("t");
+		var resume = document.getElementById("r");
+		var pause = document.getElementById("p");
+		
+			document.getElementById("c").onclick = function(){
+				a.read(text.value);
+			}
+			
+			pause.onclick = function(){
+				a.pause();
+			}
+			
+			resume.onclick = function(){
+				a.resume();
+			}
+		</script>
+	</body>
+</html>
