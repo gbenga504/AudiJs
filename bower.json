@@ -1,0 +1,29 @@
+{
+  "name": "Audi",
+  "description": "Javascript text-to-speech library primarily based on native browser API",
+  "main": "[\"src/Audi.js\", \"src/Audi.min.js\"]",
+  "keywords": [
+    "[\"audi\"",
+    "\"audijs\"",
+    "\"audi.js\"",
+    "\"text",
+    "to",
+    "speech",
+    "library",
+    "for",
+    "javascript\"]"
+  ],
+  "authors": [
+    "[\"Anifowoshe Gbenga David <daveanifowoshe@gmail.com>\"",
+    "\"Badewa Kayode <badewaKayode1@gmail.com>\"\"]"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

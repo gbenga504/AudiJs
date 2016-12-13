@@ -10,11 +10,13 @@ Audi has no dependencies, it weighs 5kb, and its free to use and modify under th
 Audi can be downloaded from the AudiJs github repo (https://github.com/gbenga504/AudiJs). It can also be installed using bower
 
 ### Bower INSTALLATION
+bower install Audi --save
 
 
 Demo & Tutorial
 ---------------
 [Play with some live speech recognition demos]
+https://youtu.be/zhuK1OoN1nE
 
 
 Hello World
@@ -36,7 +38,7 @@ Hello World
 ```
 
 ***Check out some demo on youtube @
-
+https://youtu.be/zhuK1OoN1nE
 
 
 PHASE
