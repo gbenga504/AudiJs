@@ -20,12 +20,18 @@ https://youtu.be/zhuK1OoN1nE
 
 Hello World (QUICK EXAMPLE)
 -----------
+	//load the audi library here from your local file folder 
+	<script type='text/javascript' src='audi.js'></script>
+	
+	
 	//init Audi with the local attribute to use the browsers native speech API 
 	var audiSpeaker = new Audi("local");
+	
 	
 	//using Audi methods without callbacks 
 	audiSpeaker.read("I love the day called Christmas");
 	audiSpeaker.dictate(["coding", "is", "life"]);
+	
 	
 	//with a call back 
 	audiSpeaker.read("Futarians are here to stay", function(){
@@ -56,13 +62,33 @@ Language is automatically selected for teh user if one uses the local service...
 	
 	//sets the current language (arg accepts only strings)
 	myAudi.lang = 'en'
+
+
+
+OTHER METHODS AVAILABLE TO AUDI 
+------------------------------
+	myAudi.read(string, optionalCallback)	//reads words and calls callback if any is provided 
 	
-METHODS AVAILABLE TO AUDIJS
--------------------------
-- [x] read(string) -- used to read words
-- [x] dictate(Array) ---- accepts an array and dictates its contents
-- [x] toArray(string, splitter(optional)) ----- splits a string based on the splitter provided and if the splitter results to undefined or is not provided , it splits the string based on an empty string ' '
-- [x] volume, rate, lang, pitch  --- all have getter and setter methods .. All but lang accept a type float, number or integer between 0.1 - 1 for its setter.. while lang only accept a type string for its setter 
+	myAudi.dictate(Array, optionalCallback)	//dictates an array of words and calls callback if provided 
+	
+	myAudi.toArray(string, splitter(optional)) //splits a string based on the splitter provided and if the splitter results to undefined or is not provided , it splits the string based on an empty string ' '
+	
+	//SETTERS AND GETTERS
+	
+	//GETTERS RETURN THE CURRENT STATE OF THE AUDI PROPERTY
+	myAudi.rate 	//returns 1 by default 
+	myAudi.volume
+	myAudi.pitch 
+	myAudi.lang	//returns teh current running language 
+	
+	//SETTERS CAN ONLY ACCEPT FLOAT TYPES from 0.0 - 1.0 
+	myAudi.rate = 0.5;	//sets the rate to 0.5
+	myAudi.pitch = 0.2
+	myAudi.volume = 0.5
+	
+	//GETS THE CURRENT LANGUAGE LIST CURRENTLY AVAILBALE TO THE USER 
+	console.log(myAudi.getLangList);
+
   
   
 ***Check out some demo on youtube @
