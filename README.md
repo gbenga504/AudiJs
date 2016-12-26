@@ -13,6 +13,10 @@ Audi can be downloaded from the AudiJs github repo (https://github.com/gbenga504
 bower install Audi --save
 
 
+### MINOR BUG FIXES 
+The cannot read property lang of undefined returned by chrome, was solved... Thanks to kayslay issue #1
+
+
 Demo & Tutorial
 ---------------
 [Play with some live speech recognition demos]
@@ -20,6 +24,8 @@ https://youtu.be/zhuK1OoN1nE
 
 Hello World (QUICK EXAMPLE)
 -----------
+```javascript
+
 	//load the audi library here from your local file folder 
 	<script type='text/javascript' src='audi.js'></script>
 	
@@ -37,11 +43,13 @@ Hello World (QUICK EXAMPLE)
 	audiSpeaker.read("Futarians are here to stay", function(){
 		console.log('done');
 	})
-	
+```	
 
 INITILAIZING 
 -------------
 This can be done in two ways, i.e using either the local service which uses the browsers native speech API or using the online service which uses the google Text-To-Speech API... However, if no parameter is selected then it defaults to online service 
+
+```javascript
 
 	//using local service 
 	var myAudi = new Audi("local");
@@ -49,11 +57,14 @@ This can be done in two ways, i.e using either the local service which uses the 
 	//using online service
 	var myAudi = new Audi("online");
 	
-	
+```
+
+
 LANGUAGE SELECTION
 ------------------
 Language is automatically selected for teh user if one uses the local service.... This is because it is difficult to predict if the user speaks english or any other particular language.. Audi therefore selects default language for the user using the users computer
 
+```javascript
 	//gets the list of languages available to the user  
 	myAudi.getLangList
 	
@@ -62,11 +73,13 @@ Language is automatically selected for teh user if one uses the local service...
 	
 	//sets the current language (arg accepts only strings)
 	myAudi.lang = 'en'
-
+```
 
 
 OTHER METHODS AVAILABLE TO AUDI 
 ------------------------------
+
+```javascript
 	myAudi.read(string, optionalCallback)	//reads words and calls callback if any is provided 
 	
 	myAudi.dictate(Array, optionalCallback)	//dictates an array of words and calls callback if provided 
@@ -89,7 +102,7 @@ OTHER METHODS AVAILABLE TO AUDI
 	//GETS THE CURRENT LANGUAGE LIST CURRENTLY AVAILBALE TO THE USER 
 	console.log(myAudi.getLangList);
 
-  
+```
   
 ***Check out some demo on youtube @
 https://youtu.be/zhuK1OoN1nE
