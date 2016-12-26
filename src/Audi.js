@@ -1,5 +1,5 @@
 /*!
- * Audi JavaScript Library v1.0
+ * Audi JavaScript Library v1.1
  * author : Anifowoshe Gbenga David @Gad
  * license : MIT
  */
@@ -42,7 +42,7 @@
 
     var defaultAudiEngine = "online";
     var defaultLang = "en-US";
-    var version = "1.0";
+    var version = "1.1";
     var defaultRate = 1;
     var defaultPitch = 1;
     var defaultVolume = 1;
