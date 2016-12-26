@@ -74,7 +74,7 @@
             //getVoices() produces an array of language objects currently installed on the user's computer
             //Audi uses the first language.. of the array as the default
             var available_voices = speechObject.getVoices();
-            var default_lang = available_voices[0].lang;
+            var default_lang = available_voices[0] == undefined  ? "en-US" : available_voices[0].lang ;
             return default_lang;
         }
     };
