@@ -76,7 +76,10 @@
             var available_voices = speechObject.getVoices();
             var default_lang = available_voices[0] == undefined  ? "en-US" : available_voices[0].lang ;
             return default_lang;
-        }
+		}
+		else {
+			alert(4)
+		}
     };
 
 
